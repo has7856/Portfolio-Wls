@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <button id="load">불러들이기</button>
+    <div id="box"></div>
+    <script>
+        let obj = null;
+        const loadBT =document.querySelector("#load");
+        loadBT.addEventListener("click", handleAjax);
+        function handleAjax(){
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.status == 200){
+                    let data = xhr.responseText;
+                    obj = JSON.parse(data);
+                    for(let i=0;i<obj[0]['group'].length;i++){
+                        console.log(obj[0]['group'][i].id);
+                        console.log(obj[0]['group'][i].company);
+                        console.log("images/"+obj[0]['group'][i].img);
+                    }
+                }
+            }
+            xhr.open("GET", "datagroup.json");
+            xhr.send()
+        }
+    </script>
+</body>
+</html>
