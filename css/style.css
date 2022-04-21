@@ -682,3 +682,65 @@ footer>div {
   background: #555;
 }
 
+#user-menu{
+  position: fixed;
+  top: 70px;
+  right: 90px;
+  background-color: white;
+  z-index: 99;
+  padding: 30px;
+  display: none;
+}
+#user-menu h2{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 1.2rem;
+}
+#user-gnb{
+  font-size: 20px;
+  margin-bottom: 5rem;
+}
+#user-gnb > li > a{
+  display: block;
+  width: 250px;
+  height: 45px;
+  border-bottom: 1px dotted gold;
+  line-height: 45px;
+}
+#user-gnb > li > a:hover{
+  background-color: rgb(241, 241, 241);
+}
+#login{
+  width: 250px;
+  height: 45px;
+  background-color: #ae946d;
+  color: white;
+  font-weight: 500;
+  border: none;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition-duration: .6s;
+}
+#login:hover{
+  background-color: #927d5c;
+}
+#user-menu > a{
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  width: 50px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  transition-duration: .6s;
+}
+#user-menu > a:hover{
+  border-bottom: 2px solid #555;
+}
+.fa-close{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}

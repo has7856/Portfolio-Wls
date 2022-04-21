@@ -52,6 +52,14 @@ $(function () {
     });
 
 
+    $(".fa-user").click(function(){
+        $("#user-menu").fadeToggle();
+    })
+    $(".fa-close").click(function(){
+        $("#user-menu").fadeOut();
+    });
+
+
 
     $('#item-gallery').slick({
         slidesToShow: 6,
